@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('day0.jpg'); /*  <--- Changed to local file */
+    background-size: cover; /* Cover the entire background */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+    background-image: url('darkmode2.jpg'); /* Different background for dark mode */
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: rgba(116, 8, 8, 0); /* Semi-transparent white */
+    /* Subtle gradient for depth */
+    background: linear-gradient(to bottom, rgba(100, 101, 102, 0.8), rgba(6, 9, 40, 0.7));
+    padding: 20px;
+    border-radius: 10px; /* Smoother rounded corners */
+    box-shadow: 0 4px 12px rgba(41, 10, 10, 0.15); /* Refined box-shadow */
+    transition: background-color 0.3s;
+}
+
+.dark-mode .container {
+    background: rgba(50, 50, 50, 0.7); /* Dark semi-transparent background */
+    /* Dark subtle gradient */
+    background: linear-gradient(to bottom, rgba(60, 60, 60, 0.8), rgba(50, 50, 50, 0.7));
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05); /* Adjusted box-shadow for dark mode */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.dark-mode header h1 {
+    color: #fff;
+}
+
+/* Day/Night Mode Toggle */
+.toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+#theme-toggle .sun,
+#theme-toggle .moon {
+    transition: color 0.3s;
+}
+
+#theme-toggle .sun {
+    color: #ffc107; /* Sun color */
+}
+
+#theme-toggle .moon {
+    color: darkgray; /* Dark Gray Moon color */
+}
+
+.dark-mode #theme-toggle .sun {
+    color: #3498db;
+}
+
+.dark-mode #theme-toggle .moon {
+    color: #ffc107;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background-color: #eee;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #20c997; /* A blue-green color */
+    height: 20px;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    position: relative;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333; /* Dark Gray color */
+    font-size: 14px;  /* Slightly larger font size */
+    background-color: rgba(255, 255, 255, 0.6);  /* Semi-transparent white background */
+    padding: 2px 5px; /* Add a little padding around the text */
+    border-radius: 3px; /* Optional: add rounded corners to the background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    transition: all 0.2s ease-in-out; /* Smooth transition for the 3D effect */
+}
+
+td {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.dark-mode th {
+    background-color: #666;
+    color: #fff;
+}
+
+/* 3D effect on hover */
+td:hover {
+    transform: translateY(-3px); /* Move the cell slightly up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase the box shadow on hover */
+}
+
+/* Input Styles */
+input[type="number"] {
+    width: 60px;
+}
+
+/* Button Styles */
+#addTopicBtn {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#addTopicBtn:hover {
+    background-color: #449d44;
+}
+
+.dark-mode #addTopicBtn {
+    background-color: #8bc34a;
+}
+
+.dark-mode #addTopicBtn:hover {
+    background-color: #689f38;
+}
+
+/* Per Day Video Watch */
+.per-day-video-watch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.per-day-video-watch-container input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.dark-mode .per-day-video-watch-container input {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #888;
+}
+
+.per-day-video-date {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.dark-mode .per-day-video-date {
+    color: #bbb;
+}
+
+/* Notes Styles */
+td textarea {
+    width: 100%;
+    height: 50px; /* Reduced height */
+    padding: 8px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allow user to adjust the height */
+}

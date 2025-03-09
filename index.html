@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GATE Preparation Tracker</title>
+    <!-- The core Firebase JS SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js"></script>
+
+<!-- Import the Firebase Realtime Database SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GATE Preparation Tracker</h1>
+            <h2>DBMS Topics Checklist</h2>
+        </header>
+        <div class="toggle-container">
+            <button id="theme-toggle">
+                <span class="sun">🕶️</span>
+                <span class="moon hidden">☀️</span>
+            </button>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <span class="progress-text">0%</span>
+            </div>
+        </div>
+        <table id="studyTable">
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Total Videos</th>
+                    <th>Completed</th>
+                    <th>Per/Day Video Watch</th>
+                    <th>Notes</th> <!-- New Column -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <button id="addTopicBtn">Add New Topic</button>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
