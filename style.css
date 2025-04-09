@@ -6,7 +6,7 @@ body {
     background-color: #f4f4f4;
     color: #000000;
     transition: background-color 0.3s, color 0.3s;
-    background-image: url('darkmode.jpg'); /*  <--- Changed to local file */
+    background-image: url('darkmode2.jpg'); /*  <--- Changed to local file */
     background-size: cover; /* Cover the entire background */
     background-position: center center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
